@@ -5,12 +5,12 @@ Solution to [a Code Golf challenge](http://codegolf.stackexchange.com/questions/
 Hidato Hippy
 ============
 
-"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of the [Hipster4j](http://www.hipster4j.org/) Java library.
+"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of the [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
 
 What was the Code Golf challenge?
 ---------------------------------
 
-*As described by the challenge poster...*
+*As described by the challenge poster...* <br />
 In a few British newspapers there is a game known as [Hidato](https://en.wikipedia.org/wiki/Hidato). It is somewhat similar to [Sudoku](https://en.wikipedia.org/wiki/Sudoku), albeit instead of matching into an unchanging format, it's about matching numbers in that one may connect all numbers **diagonally, vertically or horizontally** (i.e. they must be touching blocks). Here's today's version (blocks of XX are for display – they'll be spaces in input)
 
 ```
