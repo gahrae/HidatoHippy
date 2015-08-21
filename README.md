@@ -5,7 +5,7 @@ Solution to [a Code Golf challenge](http://codegolf.stackexchange.com/questions/
 Hidato Hippy
 ============
 
-"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of  [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
+"Hidato Hippy" is a solution to a challenge that was posted at [Code Golf](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of  [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
 
 What was the Code Golf challenge?
 ---------------------------------
@@ -41,7 +41,7 @@ XX XX XX XX 09 06 XX XX XX XX
 XX XX XX XX 07 08 XX XX XX XX
 ```
 
-Your program will receive an input similar to this – blocks which are either numbers, spaces (blank, for shaping) or two dashes, indicating a space you can place a number.. It should return a solved version, in which it is possible to go from 01 to the maximum value. If no solution can be found, return something [falsey](http://meta.codegolf.stackexchange.com/questions/2190/interpretation-of-truthy-falsey).
+Your program will receive an input similar to this – blocks which are either numbers, spaces (blank, for shaping) or two dashes, indicating a space you can place a number. It should return a solved version, in which it is possible to go from 01 to the maximum value. If no solution can be found, return something [falsey](http://meta.codegolf.stackexchange.com/questions/2190/interpretation-of-truthy-falsey).
 
 Note that there may not be a unique, or even the existence of, a solution – some may yield multiple due to their ambiguity, much like Sudoku, and some may be literally unsolvable. With that in mind, make sure your code takes only a minute or so at maximum to return a solution (brute force works, but careful logic may win out in this regard – remember, you need to determine if it is solvable in that minute).
 
@@ -179,7 +179,7 @@ Challenge criteria
 
 The challenge poster requested that a runtime limit be put in place. I did not want to my application to prematurely exit before finding a solution. The algorithm will terminate eventually. And presumably boards will not be large enough to run for a significant duration.
 
-Some detection of board states that can not be solved were implemented. For example, when a board has duplicate or isolated numbers. But more could be done in this regard, especially with the following situation...
+Some detection of board states that cannot be solved was implemented. For example, when a board has duplicate or isolated numbers. But more could be done in this regard, especially with the following situation...
 
 ```
 XX XX XX XX XX
