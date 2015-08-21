@@ -177,7 +177,7 @@ XX XX XX XX XX XX -- 23
 Challenge criteria
 ==================
 
-The challenge poster requested that a runtime limit be put in place. I did not want to my application to prematurely exit before finding a solution. The algorithm will terminate eventually. And presumably boards will not be large enough to run for a significant duration.
+The challenge poster requested that a runtime limit be put in place. I did not want the application to prematurely exit before finding a solution. The algorithm will terminate eventually. And presumably boards will not be large enough to run for a significant duration.
 
 Some detection of board states that cannot be solved was implemented. For example, when a board has duplicate or isolated numbers. But more could be done in this regard, especially with the following situation...
 
