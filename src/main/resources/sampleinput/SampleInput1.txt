@@ -1,0 +1,10 @@
+XX XX XX XX -- 53 XX XX XX XX
+XX XX XX XX -- -- XX XX XX XX
+XX XX 56 -- -- -- 30 -- XX XX
+XX XX -- -- -- -- -- -- XX XX
+XX -- -- 20 22 -- -- -- -- XX
+XX 13 -- 23 47 -- 41 -- 34 XX
+-- -- 11 18 -- -- -- 42 35 37
+-- -- -- -- 05 03 01 -- -- --
+XX XX XX XX -- -- XX XX XX XX
+XX XX XX XX 07 -- XX XX XX XX

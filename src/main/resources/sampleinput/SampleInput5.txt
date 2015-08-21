@@ -1,0 +1,8 @@
+-- -- -- -- 39 XX XX XX
+-- -- 07 40 -- XX XX XX
+-- -- -- -- 11 -- XX XX
+-- 04 -- -- -- 12 XX XX
+03 01 -- 16 28 -- 26 XX
+XX XX -- -- -- -- -- XX
+XX XX XX XX -- 19 21 --
+XX XX XX XX XX XX -- 23
