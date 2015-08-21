@@ -5,13 +5,15 @@ Solution to [a Code Golf challenge](http://codegolf.stackexchange.com/questions/
 Hidato Hippy
 ============
 
-Hidato Hippy is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/).
+"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of the [Hipster4j](http://www.hipster4j.org/) Java library.
 
 What was the Code Golf challenge?
 ---------------------------------
 
-In a few British newspapers there is a game known as [Hidato](https://en.wikipedia.org/wiki/Hidato). It is somewhat similar to [Sudoku](https://en.wikipedia.org/wiki/Sudoku), albeit instead of matching into an unchanging format, it's about matching numbers in that one may connect all numbers **diagonally, vertically or horizontally** (i.e. they must be touching blocks). Here's today's version (blocks of XX are for display – they'll be spaces in input)
+*As described by the challenge poster...*
+In a few British newspapers there is a game known as [Hidato](https://en.wikipedia.org/wiki/Hidato). It is somewhat similar to [Sudoku](https://en.wikipedia.org/wiki/Sudoku), albeit instead of matching into an unchanging format, it's about matching numbers in that one may connect all numbers **diagonally, vertically or horizontally** (i.e. they must be touching blocks). Here's today's version (blocks of XX are for display â€“ they'll be spaces in input)
 
+```
 XX XX XX XX -- 53 XX XX XX XX
 XX XX XX XX -- -- XX XX XX XX
 XX XX 56 -- -- -- 30 -- XX XX
@@ -22,9 +24,11 @@ XX 13 -- 23 47 -- 41 -- 34 XX
 -- -- -- -- 05 03 01 -- -- --
 XX XX XX XX -- -- XX XX XX XX
 XX XX XX XX 07 -- XX XX XX XX
+```
 
 Here is the solution, courtesy of [Vioz](http://codegolf.stackexchange.com/users/38417/vioz):
 
+```
 XX XX XX XX 52 53 XX XX XX XX
 XX XX XX XX 54 51 XX XX XX XX
 XX XX 56 55 28 50 30 31 XX XX
@@ -35,10 +39,11 @@ XX 13 19 23 47 46 41 43 34 XX
 15 16 17 10 05 03 01 39 38 36
 XX XX XX XX 09 06 XX XX XX XX
 XX XX XX XX 07 08 XX XX XX XX
+```
 
-Your program will receive an input similar to this – blocks which are either numbers, spaces (blank, for shaping) or two dashes, indicating a space you can place a number.. It should return a solved version, in which it is possible to go from 01 to the maximum value. If no solution can be found, return something [falsey](http://meta.codegolf.stackexchange.com/questions/2190/interpretation-of-truthy-falsey).
+Your program will receive an input similar to this â€“ blocks which are either numbers, spaces (blank, for shaping) or two dashes, indicating a space you can place a number.. It should return a solved version, in which it is possible to go from 01 to the maximum value. If no solution can be found, return something [falsey](http://meta.codegolf.stackexchange.com/questions/2190/interpretation-of-truthy-falsey).
 
-Note that there may not be a unique, or even the existence of, a solution – some may yield multiple due to their ambiguity, much like Sudoku, and some may be literally unsolvable. With that in mind, make sure your code takes only a minute or so at maximum to return a solution (brute force works, but careful logic may win out in this regard – remember, you need to determine if it is solvable in that minute).
+Note that there may not be a unique, or even the existence of, a solution â€“ some may yield multiple due to their ambiguity, much like Sudoku, and some may be literally unsolvable. With that in mind, make sure your code takes only a minute or so at maximum to return a solution (brute force works, but careful logic may win out in this regard â€“ remember, you need to determine if it is solvable in that minute).
 
 Format your answers with the standard header (## Language name, X bytes). As always, the shortest code wins. I'll be testing each with some solvable, some mostly-sparse, and some intentionally unsolvable puzzles (all of which will be in different shapes and amounts of numbers), so don't hardcode any answers. Happy coding!
 
@@ -169,12 +174,12 @@ XX XX XX XX XX XX -- 23
 -- 14 --  6 
 ```
 
-Challenge criteria not met
-==========================
+Challenge criteria
+==================
 
 The challenge poster requested that a runtime limit be put in place. I did not want to my application to prematurely exit before finding a solution. The algorithm will terminate eventually. And presumably boards will not be large enough to run for a significant duration.
 
-Some detection of board states that can't be solved was implemented. For example, when a board has duplicate or isolated numbers. But more could be done in this regard, especially with the following situation...
+Some detection of board states that can not be solved were implemented. For example, when a board has duplicate or isolated numbers. But more could be done in this regard, especially with the following situation...
 
 ```
 XX XX XX XX XX
