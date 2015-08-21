@@ -189,7 +189,7 @@ XX -- 01 -- XX
 XX XX XX XX XX
 ``` 
 
-*The above problem checking every empty cell is touchable by the path node, eg the cell with the value `4` in it.* 
+*The above problem could be solved by checking that every empty cell is "touchable" by the path node (eg `4` in the above puzzle).* 
 
 
 Lessons from the challenge
