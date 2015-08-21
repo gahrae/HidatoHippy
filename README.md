@@ -5,7 +5,7 @@ Solution to [a Code Golf challenge](http://codegolf.stackexchange.com/questions/
 Hidato Hippy
 ============
 
-"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of the [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
+"Hidato Hippy" is a solution to a challenge that was posted at [Code Gode](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of  [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
 
 What was the Code Golf challenge?
 ---------------------------------
