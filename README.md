@@ -204,16 +204,16 @@ Where appropriate I used streams instead of for loops. So instead of iterating o
 References
 ==========
  
-*An alternative Hidato solutions*
+*Alternative Hidato solutions*
 [http://rosettacode.org/wiki/Hidato](http://rosettacode.org/wiki/Hidato)
 
-*A guide to writing Heuristics*
+*Guide to writing Heuristics*
 [http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html](http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html)
 
-*An online "Hidoku" puzzle generator*
+*Online "Hidoku" puzzle generator*
  [http://hidoku-solver.appspot.com](http://hidoku-solver.appspot.com)
  
-*Java search algorithm library "Hipster"*
+*"Hipster" ~ An Open Source Java Library for Heuristic Search*
 [http://www.hipster4j.org/](http://www.hipster4j.org/)
  
 
