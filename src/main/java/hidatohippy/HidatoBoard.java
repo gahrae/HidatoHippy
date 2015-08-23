@@ -67,12 +67,12 @@ public class HidatoBoard {
 	}
 
 	/**
-	 * 
+	 * Moves the current location into the cell of the provided direction.
 	 * 
 	 * Throws IllegalMoveException when unable to move in the given direction
 	 * 
-	 * @param direction
-	 * @throws IllegalMoveException thrown when unable to move
+	 * @param direction The direction to move in.
+	 * @throws IllegalMoveException thrown when unable to move in supplied direction.
 	 */
 	public void move(HidatoAction direction) throws IllegalMoveException {
 		if (!canMove(direction)) {
