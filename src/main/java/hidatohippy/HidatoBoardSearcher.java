@@ -55,11 +55,7 @@ public class HidatoBoardSearcher {
 				List<HidatoAction> directions = new ArrayList<HidatoAction>();
 				for (HidatoAction direction : HidatoAction.values()) {
 					if (state.canMove(direction)) {
-						HidatoBoard newState = new HidatoBoard(state);
-						newState.move(direction);						
-						if (!newState.hasDuplicateNumbers()) {
-							directions.add(direction);
-						}
+						directions.add(direction);
 					}
 				}
 				return directions;				
@@ -72,7 +68,11 @@ public class HidatoBoardSearcher {
 		ActionStateTransitionFunction<HidatoAction, HidatoBoard> atf = new ActionStateTransitionFunction<HidatoAction, HidatoBoard>() {
 			public HidatoBoard apply(HidatoAction action, HidatoBoard state) {
 				HidatoBoard next = new HidatoBoard(state);
-				next.move(action);
+				try {
+					next.move(action);
+				} catch (IllegalMoveException e) {
+					throw new RuntimeException(e);
+				}
 				return next;
 			}
 		};

@@ -77,7 +77,7 @@ public class HidatoBoardTest {
 			boolean thrown = false;
 			try {
 				smallestBoard.move(action);
-			} catch (IllegalArgumentException e) {
+			} catch (IllegalMoveException e) {
 				thrown = true;
 			}
 			assertTrue(
@@ -91,7 +91,7 @@ public class HidatoBoardTest {
 			boolean thrown = false;
 			try {
 				hidatoBoard.move(action);
-			} catch (IllegalArgumentException e) {
+			} catch (IllegalMoveException e) {
 				thrown = true;
 			}
 			assertTrue(

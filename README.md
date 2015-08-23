@@ -109,7 +109,7 @@ Performance
 
 Below are the run times for sample input files.
 
-**SampleInput1.txt** : `Total time: 7.114 s`
+**SampleInput1.txt** : `Total time: 5.656 s`
 ```
 XX XX XX XX -- 53 XX XX XX XX 
 XX XX XX XX -- -- XX XX XX XX 
@@ -123,7 +123,7 @@ XX XX XX XX -- -- XX XX XX XX
 XX XX XX XX  7 -- XX XX XX XX 
 ```
 
-**SampleInput2.txt** : `Total time: 138.8 ms`
+**SampleInput2.txt** : `Total time: 118.7 ms`
 ```
 -- 33 35 -- -- XX XX XX 
 -- -- 24 22 -- XX XX XX 
@@ -142,7 +142,7 @@ XX  1 XX -- XX
 XX XX XX XX XX 
 ```
 
-**SampleInput4.txt** : `Total time: 860.1 ms`
+**SampleInput4.txt** : `Total time: 747.7 ms`
 ```
 30 -- 26 -- 16 -- -- 11 
 -- -- -- 18 -- -- --  9 
@@ -154,7 +154,7 @@ XX XX XX XX XX
 61 -- -- -- -- -- 46 -- 
 ```
 
-**SampleInput5.txt** : `Total time: 1.456 s`
+**SampleInput5.txt** : `Total time: 1.216 s`
 ```
 -- -- -- -- 39 XX XX XX 
 -- --  7 40 -- XX XX XX 
@@ -166,7 +166,7 @@ XX XX XX XX -- 19 21 --
 XX XX XX XX XX XX -- 23
 ``` 
 
-**SampleInput6.txt** : `Total time: 89.34 ms`
+**SampleInput6.txt** : `Total time: 83.21 ms`
 ```
 -- -- -- -- 
 12 --  1 -- 

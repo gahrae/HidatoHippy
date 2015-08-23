@@ -66,9 +66,17 @@ public class HidatoBoard {
 		}
 	}
 
-	public void move(HidatoAction direction) {
+	/**
+	 * 
+	 * 
+	 * Throws IllegalMoveException when unable to move in the given direction
+	 * 
+	 * @param direction
+	 * @throws IllegalMoveException thrown when unable to move
+	 */
+	public void move(HidatoAction direction) throws IllegalMoveException {
 		if (!canMove(direction)) {
-			throw new IllegalArgumentException("Unable to move in direction: "
+			throw new IllegalMoveException("Unable to move in direction: "
 					+ direction);
 		}
 
@@ -77,6 +85,16 @@ public class HidatoBoard {
 		setCellValue(location, nextValue);
 	}
 
+	/**
+	 * Can move in direction when:
+	 * <ul>
+	 *  <li>The destination cell is within the boundary of the board, and</li>
+	 *  <li>The value of the destination cell is one higher than the current cell, or</li>
+	 *  <li>The destination cell is empty, and no other cell has the expected next value</li>
+	 * </ul>
+	 * @param direction
+	 * @return
+	 */
 	public boolean canMove(HidatoAction direction) {
 		Point newLocation = direction.move(location);
 		if (newLocation.x < 0 || newLocation.x > getWidth() - 1
@@ -84,8 +102,15 @@ public class HidatoBoard {
 			return false;
 		}
 
-		return getCellValue(newLocation) == NUMBER_PLACEHOLDER
-				|| getCellValue(newLocation) == getCellValue(location) + 1;
+		int nextLocationValue = getCellValue(newLocation);
+		int expectedNextValue = getCellValue(location) + 1;
+		if (nextLocationValue == expectedNextValue) {
+			return true;
+		}
+
+		return nextLocationValue == NUMBER_PLACEHOLDER
+				&& cellStream().noneMatch(
+						cell -> getCellValue(cell) == expectedNextValue);
 	}
 
 	/**
