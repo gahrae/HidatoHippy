@@ -44,8 +44,6 @@ public class HidatoBoardSearcher {
 				.build();
 
 		Predicate<WeightedNode<HidatoAction, HidatoBoard, Double>> predicate = getPredicateFunction();
-		
-		Predicate<String> emptyTest = s -> s.isEmpty();
 
 		return Hipster.createAStar(problem).search(predicate);
 	}
