@@ -10,12 +10,11 @@ import java.util.stream.StreamSupport;
 
 import org.junit.Test;
 
-import com.google.common.base.Predicate;
-
 import es.usc.citius.hipster.model.function.ActionFunction;
 import es.usc.citius.hipster.model.impl.WeightedNode;
 import es.usc.citius.hipster.model.problem.ProblemBuilder;
 import es.usc.citius.hipster.model.problem.SearchProblem;
+import es.usc.citius.hipster.util.Predicate;
 
 public class HidatoBoardSearcherTest {
 

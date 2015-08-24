@@ -82,7 +82,7 @@ Solution found!
 15 14  7  6 
 
 Total solutions: 1
-Total time: 90.49 ms
+Total time: 77
 Total number of iterations: 398
 + Solution 1: 
  - States: 
@@ -99,7 +99,7 @@ What is this output?
 
 The output includes the challenge requirements to display the completed board.
 
-It also displays `Additional details...` which is provided by Hipster to show which states were used, and actions taken.
+It also displays `Additional details...` which is provided by Hipster to show the time taken in milliseconds, what actions were taken and states generated.
 
 Items in the list of states are of the form (x,y)=v. The `x` and `y` values are the coordinate location in the board, and `v` is the value at this spot. 
  
@@ -107,9 +107,9 @@ Items in the list of states are of the form (x,y)=v. The `x` and `y` values are 
 Performance
 ===========
 
-Below are the run times for sample input files.
+Below are the run times in milliseconds for sample input files.
 
-**SampleInput1.txt** : `Total time: 5.656 s`
+**SampleInput1.txt** : `Total time: 5830` (5.8 s)
 ```
 XX XX XX XX -- 53 XX XX XX XX 
 XX XX XX XX -- -- XX XX XX XX 
@@ -123,7 +123,7 @@ XX XX XX XX -- -- XX XX XX XX
 XX XX XX XX  7 -- XX XX XX XX 
 ```
 
-**SampleInput2.txt** : `Total time: 118.7 ms`
+**SampleInput2.txt** : `Total time: 121` (121 ms)
 ```
 -- 33 35 -- -- XX XX XX 
 -- -- 24 22 -- XX XX XX 
@@ -135,14 +135,14 @@ XX XX XX XX --  7 -- --
 XX XX XX XX XX XX  5 -- 
 ```
 
-**SampleInput3_impossible.txt** : `Total time: 0 ms`
+**SampleInput3_impossible.txt** : `Total time: 0 ms` (0 ms)
 ```
 XX XX XX XX XX 
 XX  1 XX -- XX 
 XX XX XX XX XX 
 ```
 
-**SampleInput4.txt** : `Total time: 747.7 ms`
+**SampleInput4.txt** : `Total time: 911` (911 ms)
 ```
 30 -- 26 -- 16 -- -- 11 
 -- -- -- 18 -- -- --  9 
@@ -154,7 +154,7 @@ XX XX XX XX XX
 61 -- -- -- -- -- 46 -- 
 ```
 
-**SampleInput5.txt** : `Total time: 1.216 s`
+**SampleInput5.txt** : `Total time: 1343` (1.3 s)
 ```
 -- -- -- -- 39 XX XX XX 
 -- --  7 40 -- XX XX XX 
@@ -166,7 +166,7 @@ XX XX XX XX -- 19 21 --
 XX XX XX XX XX XX -- 23
 ``` 
 
-**SampleInput6.txt** : `Total time: 83.21 ms`
+**SampleInput6.txt** : `Total time: 77` (77 ms)
 ```
 -- -- -- -- 
 12 --  1 -- 
@@ -200,6 +200,7 @@ Where appropriate I used streams instead of for loops. So instead of iterating o
 * Delaying use of terminal operations increased performance due to the amount of looping.
 * Ordering which filter conditions are checked first by their "effort" increased performance.
 * Care should be taken to check the heuristic is actually working.
+
 
 References
 ==========
