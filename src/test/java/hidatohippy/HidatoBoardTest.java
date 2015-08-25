@@ -408,7 +408,7 @@ public class HidatoBoardTest {
 
 	@Test
 	public void testPointStreamPoint() throws Exception {
-		assertEquals(9, HidatoBoard.pointStream(new Point(0,0)).count());
+		assertEquals(8, HidatoBoard.pointStream(new Point(0,0)).count());
 		
 		List<Point> generated = HidatoBoard.pointStream(new Point(0,0)).collect(Collectors.toList());
 		assertTrue(generated.containsAll(Arrays.asList(new Point[] {

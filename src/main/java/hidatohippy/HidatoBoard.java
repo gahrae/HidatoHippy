@@ -363,10 +363,12 @@ public class HidatoBoard {
 		return IntStream
 				.rangeClosed(-1, 1)
 				.mapToObj(
-						y -> (Stream<Point>) IntStream.rangeClosed(-1, 1)
+						y -> (Stream<Point>) IntStream
+								.rangeClosed(-1, 1)
 								.mapToObj(
 										x -> new Point(origin.x + x, origin.y
-												+ y)))
+												+ y))
+								.filter((Point p) -> !(p.x == origin.x && p.y == origin.y)))
 				.flatMap(innerStream -> innerStream);
 	}
 }
