@@ -1,12 +1,5 @@
 package hidatohippy;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
-
 import es.usc.citius.hipster.algorithm.Algorithm;
 import es.usc.citius.hipster.model.impl.WeightedNode;
 
@@ -38,15 +31,21 @@ public class HidatoHippy {
 				return;
 			}
 			String fileName = args[0];
-			HidatoBoard board = readBoard(fileName);
+			HidatoBoard board = HidatoBoard.fromFile(fileName);
 
 //			String folder = "src/main/resources/sampleinput/";
-//			HidatoBoard board = readBoard(folder + "SampleInput1.txt");
-//			HidatoBoard board = readBoard(folder + "SampleInput2.txt");
-//			HidatoBoard board = readBoard(folder + "SampleInput3_impossible.txt");
-//			HidatoBoard board = readBoard(folder + "SampleInput4.txt");
-//			HidatoBoard board = readBoard(folder + "SampleInput5.txt");
-//			HidatoBoard board = readBoard(folder + "SampleInput6.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput1.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput2.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput3_impossible.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput4.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput5.txt");
+//			HidatoBoard board = HidatoBoard.fromFile(folder
+//					+ "SampleInput6.txt");
 
 			System.out.println("Original...");
 			System.out.println(board.boardAsString());
@@ -71,18 +70,6 @@ public class HidatoHippy {
 			e.printStackTrace();
 			System.exit(2);
 		}
-	}
-
-	private static HidatoBoard readBoard(String fileName) {
-		List<String> stringList = null;
-		try {
-			Path filePath = new File(fileName).toPath();
-			stringList = Files.readAllLines(filePath, Charset.defaultCharset());
-		} catch (IOException e) {
-			System.out.println("Unable to read input file: " + fileName);
-			throw new RuntimeException(e);
-		}
-		return new HidatoBoard(stringList.toArray(new String[] {}));
 	}
 
 	public static void displayUsage() {

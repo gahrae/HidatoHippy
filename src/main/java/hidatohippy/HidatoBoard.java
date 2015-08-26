@@ -1,7 +1,13 @@
 package hidatohippy;
 
 import java.awt.Point;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -370,5 +376,17 @@ public class HidatoBoard {
 												+ y))
 								.filter((Point p) -> !(p.x == origin.x && p.y == origin.y)))
 				.flatMap(innerStream -> innerStream);
+	}
+
+	public static HidatoBoard fromFile(String fileName) {
+		List<String> stringList = null;
+		try {
+			Path filePath = new File(fileName).toPath();
+			stringList = Files.readAllLines(filePath, Charset.defaultCharset());
+		} catch (IOException e) {
+			System.out.println("Unable to read input file: " + fileName);
+			throw new RuntimeException(e);
+		}
+		return new HidatoBoard(stringList.toArray(new String[] {}));
 	}
 }
