@@ -7,6 +7,8 @@ Hidato Hippy
 
 "Hidato Hippy" is a solution to a challenge that was posted at [Code Golf](http://codegolf.stackexchange.com/). The solution uses [A Star Search](https://en.wikipedia.org/wiki/A*_search_algorithm) with the help of  [Hipster4j](http://www.hipster4j.org/) ~ an Open Source Heuristic Search Java Library. 
 
+![Build Status](https://api.travis-ci.org/gahrae/HidatoHippy.svg?branch=master)
+
 What was the Code Golf challenge?
 ---------------------------------
 
